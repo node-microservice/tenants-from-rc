@@ -1,0 +1,30 @@
+{
+  "name": "@microservice/tenants-from-rc",
+  "version": "1.0.0",
+  "description": "Reads a preconigured set of tenants via rc",
+  "main": "index.js",
+  "scripts": {
+    "lint": "jscs index.js spec.js && jshint index.js spec.js",
+    "test": "mocha spec.js",
+    "ci": "npm run lint && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/node-microservice/tenants-from-rc.git"
+  },
+  "author": "Doug Moscrop <doug.moscrop@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/node-microservice/tenants-from-rc/issues"
+  },
+  "homepage": "https://github.com/node-microservice/tenants-from-rc#readme",
+  "dependencies": {
+    "rc": "^1.1.0"
+  },
+  "devDependencies": {
+    "jscs": "^2.1.0",
+    "jshint": "^2.8.0",
+    "mocha": "^2.2.5",
+    "should": "^7.0.4"
+  }
+}

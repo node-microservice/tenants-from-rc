@@ -1,0 +1,16 @@
+{
+	"jwolfe.file-tree-exclude.list": [
+		".vagrant",
+		"public",
+		"output",
+		"node_modules",
+		"bower_components",
+		"coverage"
+	],
+	"language": {
+		"javascript": {
+			"linting.prefer": ["JSHint", "JSCS"],
+			"linting.usePreferredOnly": true
+		}
+	}
+}

@@ -1,6 +1,6 @@
 {
   "name": "@microservice/tenants-from-rc",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Reads a preconigured set of tenants via rc",
   "main": "index.js",
   "scripts": {

@@ -1,2 +1,2 @@
-[test.tenant1]
+[tenant1]
   foo_bar = baz

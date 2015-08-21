@@ -4,7 +4,7 @@ var assert = require('assert'),
 var testTenants;
 
 beforeEach(function() {
-  testTenants = tenants('test');
+  testTenants = tenants();
 });
 
 it('should produce a function', function() {

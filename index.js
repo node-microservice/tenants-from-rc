@@ -1,20 +1,13 @@
 var rc = require('rc');
 
-module.exports = function(arg) {
-  var opts = typeof arg === 'string' ? {
-    serviceName: arg,
-    tenantKey: 'tenants'
-  } : arg;
+module.exports = function(tenantKey) {
+  if (tenantKey === undefined || typeof tenantKey === 'string') {
+    var tenants = rc(tenantKey || 'tenants') || {};
 
-  if (!opts.serviceName) {
-    throw new Error('Must specify a service name');
+    return function(tenantId, callback) {
+      callback(tenants[tenantId]);
+    };
+  } else {
+    throw new Error('tenantKey must either be undefined (use default value) or a string');
   }
-
-  opts.tenantKey = opts.tenantKey || 'tenants';
-
-  var tenants = rc(opts.tenantKey)[opts.serviceName] || {};
-
-  return function(tenantId, callback) {
-    callback(tenants[tenantId]);
-  };
 };
